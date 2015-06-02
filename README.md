@@ -12,42 +12,56 @@ Join the chat room to discuss this planned project:
 
 ### Overall Idea
 
-Debates are made up of three concepts: Claims, Arguments and Evidence.
+Debates are made up of two concepts: Claims and Evidence.
 
 **Claims**
 
-A Claim is a true or false statement which is in the realm of scientific inquiry. Claims are made in the context of our current scientific understanding, which inherently means they may change over time. Users are required to evaluate the arguments and set their stance on each of the arguments (reddit-style voting). It’s important to note, users do not vote on the claim, only its arguments. Using an algorithm, the status of the claim is defined to be true, false or undecided (for example, one algorithm could say that 80% of votes in for arguments would set a claim to be true, 80% in against would set it to false). As in science, with new evidence, we should be able re-evaluate our claims. Status changes in one claim can have cascading effects to other claims which used it as an argument. Claims which are undecided contribute no points to other claims.
+A Claim is a true or false statement which is in the realm of scientific inquiry. Users optionally set their stance on claim to **For** or **Against** (Reddit style up/down/no-vote). Claims are made in the context of our current scientific understanding, so with new knowledge, Users must be allowed to change their vote over time.
+
+The status of a claim is calculated from two sources, the prior claims that backup this claim and the number of votes For or Against. At any given time, the status of a claim will be one of:
+
+* `True`
+* `False`
+* `Undecided`
+
+An example calculation algorithm would require some threshold of prior agreement combined with some threshold of user agreement in either the positive `True` or the negative `Undecided`. Without this combined agreement, the Claim is `Undecided`.
+
+Since vote can change over time, status changes can also occur over time. If new evidence is found and a claim is changed from `True` to `False`, this change can lead to cascading status changes across other claims. This is good as it forces pre-existing claims to be re-evaluated.
+
+Users decide their vote by reviewing the Arguments and Evidence. 
 
 ![claim diagram](https://docs.google.com/drawings/d/1ROGqx_iZ9OwUmS57BVzWs9Hno2jEppSmwGN725Sf-5U/pub?w=517&h=442)
 
-Once widely accepted or rejected, it is considered settled and can then used to greater effect in arguments of future debates. If rejected, it may be used in the reverse.
-
-**Arguments**
-
-An argument is a contentious or complex claim which is not a true or false statement (if they do , then maybe they should be a claim). Will often include scientific evidence, such as experimentational and observational studies. If anecdotal evidence or pseudo-scientific evidence is provided, it should be flagged by users, and then also voted on, and at some threshold, it will be invalidated and will not count towards the final claim.
+Within an a Claim, each sentence must be backed up by one or more prior claims or evidence. If a claim is `Undecided`, then *that* debate must be had in order for it to be considered `True` (or it may back fire and prove to be `False`).
 
 ![argument diagram](https://docs.google.com/drawings/d/1i-IKMR9W1n_3xHnfmiabU8vRpQ12qHt7wEWQbx4HDrk/pub?w=548&h=495)
 
-An Argument must be backed up by one or more claims. If a claim is undecided, then that debate must be had so it can be accepted or rejected. An argument score is the weighted sum of the votes, where the weight is determined by the acceptance of its claims.
-
-An Argument has 3 states:
-
-* Valid – One or more of claims make sense though are not proven
-* Invalid – One or more of the claims do not make sense
-* Sound – All of the claims are accepted
-
 **Evidence**
 
-A piece of evidence is a single document or group of documents. It could be a photo, a peer-reviewed paper, a statistic with an accompanying study or a quote. In order to be accepted as evidence, each document **must** include a valid link or a copy of the original material.
+A piece of evidence is a single document or group of documents. It could be a photo, a peer-reviewed paper, a statistic with an accompanying experimental and observational study or a quote. In order to be accepted as evidence, each document **must** include a valid link or a copy of the original material.
+
+Users must be able to rate evidence quality. So if anecdotal evidence or pseudo-scientific evidence is provided, it can be flagged as such by users (at some threshold it will be invalidated and will not count towards any Claims).
+
+---
+
+* Are these good foundational concepts?
+* Maybe Arguments are also Claims?
+* Speaking in purely factual statements is optimal, though is it realistic?
+* What do users vote on? If a "fact" is true or false
 
 ---
 
 ### Ideas
 
 * Debate types
-	* Factual - *The sky is blue because of light defraction* (**Focus of beta versions**)
-	* Opinion - *Hotdogs are better than Hamburgers* (This type drops the "which is in the realm of scientific inquiry" part of a claim, **not catered for in beta versions**)
-* Color coding
+	* **Objective** (Factual)
+		* E.g. *The sky is blue due to light diffraction in the atmosphere* is universally true or false
+		* **Focus of beta versions**
+	* **Subjective** (Opinion)
+		* E.g. *Hotdogs are better than Hamburgers* is true or false depending on who you ask
+		* Drops the "which is in the realm of scientific inquiry" part of a claim definition
+		* **Not catered for in beta versions**
+* Claim color coding
 	* Traffic-light theme
 		* False claims are red
 		* True claims are green
