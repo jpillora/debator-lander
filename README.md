@@ -12,14 +12,14 @@ Join the chat room to discuss this planned project:
 
 ### Overall Idea
 
-Debates are made up of three concepts: Claims, Arguments and Evidence.
+Debates are made up of three concepts: **Claims**, **Arguments** and **Evidence**.
 
 **Claims**
 
-* A Claim represents a debate and comes in the form of a true or false statement which is in the realm of scientific inquiry.
+* A Claim represents a debate and comes in the form of a true or false statement.
 * A Claim contains Arguments:
 
-	![claim diagram](https://docs.google.com/drawings/d/1ROGqx_iZ9OwUmS57BVzWs9Hno2jEppSmwGN725Sf-5U/pub?w=517&h=442)
+![claim diagram](https://docs.google.com/drawings/d/1ROGqx_iZ9OwUmS57BVzWs9Hno2jEppSmwGN725Sf-5U/pub?w=517&h=442)
 
 * In public debates, anyone may present their own Argument.
 * Users may then review each Argument and add a vote any of the arguments.
@@ -33,7 +33,7 @@ Debates are made up of three concepts: Claims, Arguments and Evidence.
 
 **Arguments**
 
-* An Argument represents an answer to it's parent Claim
+* An Argument represents an answer to its parent Claim
 * An Argument must be either `For` and `Against` the Claim
 * Within an a Argument, each sentence must be backed up by one or more prior Claims or pieces Evidence. If a claim is `Undecided`, then *that* debate must be had in order for it affect the Claim.
 
@@ -61,11 +61,9 @@ Users must be able to rate evidence quality. So, if anecdotal evidence or pseudo
 * Debate types
 	* **Objective** (Factual)
 		* E.g. *The sky is blue due to light diffraction in the atmosphere* is universally true or false
-		* **Focus of beta versions**
+		* Only scientifically verifiable Claims can be used
 	* **Subjective** (Opinion)
 		* E.g. *Hotdogs are better than Hamburgers* is true or false depending on who you ask
-		* Drops the "which is in the realm of scientific inquiry" part of a claim definition
-		* **Not catered for in beta versions**
 * Claim color coding
 	* Traffic-light theme
 		* False claims are red
