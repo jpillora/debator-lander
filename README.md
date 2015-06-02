@@ -12,41 +12,47 @@ Join the chat room to discuss this planned project:
 
 ### Overall Idea
 
-Debates are made up of two concepts: Claims and Evidence.
+Debates are made up of three concepts: Claims, Arguments and Evidence.
 
 **Claims**
 
-A Claim is a true or false statement which is in the realm of scientific inquiry. Users optionally set their stance on claim to **For** or **Against** (Reddit style up/down/no-vote). Claims are made in the context of our current scientific understanding, so with new knowledge, Users must be allowed to change their vote over time.
+* A Claim represents a debate and comes in the form of a true or false statement which is in the realm of scientific inquiry.
+* A Claim contains Arguments:
 
-The status of a claim is calculated from two sources, the prior claims that backup this claim and the number of votes For or Against. At any given time, the status of a claim will be one of:
+	![claim diagram](https://docs.google.com/drawings/d/1ROGqx_iZ9OwUmS57BVzWs9Hno2jEppSmwGN725Sf-5U/pub?w=517&h=442)
 
-* `True`
-* `False`
-* `Undecided`
+* In public debates, anyone may present their own Argument.
+* Users may then review each Argument and add a vote any of the arguments.
+* Users must be allowed to add or remove their vote from any Argument over time.
+* The status of a claim is calculated from its arguments (Calculation method is currently undefined)
+* The status of a claim will be one of:
+	* `True`
+	* `False`
+	* `Undecided`
+* Since status' can change over time changed, these changes can lead to cascading status changes across other claims. This is good as it forces existing claims to be re-evaluated.
 
-An example calculation algorithm would require some threshold of prior agreement combined with some threshold of user agreement in either the positive `True` or the negative `Undecided`. Without this combined agreement, the Claim is `Undecided`.
+**Arguments**
 
-Since vote can change over time, status changes can also occur over time. If new evidence is found and a claim is changed from `True` to `False`, this change can lead to cascading status changes across other claims. This is good as it forces pre-existing claims to be re-evaluated.
-
-Users decide their vote by reviewing the Arguments and Evidence. 
-
-![claim diagram](https://docs.google.com/drawings/d/1ROGqx_iZ9OwUmS57BVzWs9Hno2jEppSmwGN725Sf-5U/pub?w=517&h=442)
-
-Within an a Claim, each sentence must be backed up by one or more prior claims or evidence. If a claim is `Undecided`, then *that* debate must be had in order for it to be considered `True` (or it may back fire and prove to be `False`).
+* An Argument represents an answer to it's parent Claim
+* An Argument must be either `For` and `Against` the Claim
+* Within an a Argument, each sentence must be backed up by one or more prior Claims or pieces Evidence. If a claim is `Undecided`, then *that* debate must be had in order for it affect the Claim.
 
 ![argument diagram](https://docs.google.com/drawings/d/1i-IKMR9W1n_3xHnfmiabU8vRpQ12qHt7wEWQbx4HDrk/pub?w=548&h=495)
 
 **Evidence**
 
-A piece of evidence is a single document or group of documents. It could be a photo, a quote from a peer-reviewed paper or trusted source*, a statistic with an accompanying experimental and observational study. In order to be accepted as evidence, each document **must** include a valid link or a copy of the original material.
+A piece of evidence is a single document or group of documents. It could be a photo, a quote from a peer-reviewed paper, a statistic with an accompanying experimental and observational study. In order to be accepted as evidence, each document **must** include a valid link or a copy of the original material.
 
-Users must be able to rate evidence quality. So if anecdotal evidence or pseudo-scientific evidence is provided, it can be flagged as such by users (at some threshold it will be invalidated and will not count towards any Claims).
+Users must be able to rate evidence quality. So, if anecdotal evidence or pseudo-scientific evidence is provided, it can be flagged as such by users (at some threshold it will be invalidated and will not count towards any Claims).
 
 ---
+
+### Questions
 
 * Are these good foundational concepts?
 * Making a case for something in purely factual statements is optimal, though is it realistic?
 * What should users vote on?
+* What are acceptable sources of evidence?
 
 ---
 
