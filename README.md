@@ -45,9 +45,8 @@ Users must be able to rate evidence quality. So if anecdotal evidence or pseudo-
 ---
 
 * Are these good foundational concepts?
-* Maybe Arguments are also Claims?
 * Speaking in purely factual statements is optimal, though is it realistic?
-* What do users vote on? If a "fact" is true or false
+* What should users vote on?
 
 ---
 
@@ -98,7 +97,7 @@ Users must be able to rate evidence quality. So if anecdotal evidence or pseudo-
 		* How does Wikipedia do it?
 * Scale Issues (*more than 1000 users*)
 	* Fight botnets
-		* New captcha on signup
+		* New single-click captcha on sign-up
 	* Fight social media zombie rally cries (mass uninformed votes)
 		* Must contribute before you are able to vote
 
@@ -108,8 +107,8 @@ Users must be able to rate evidence quality. So if anecdotal evidence or pseudo-
 
 * Private groups
 	* Universities / Schools
-		* Grant students are participants
-		* Grant teachers/tutors are moderators
+		* Students are participants
+		* Teachers and Tutors are moderators
 * Auto fetch source to validate link integrity and material quality
 * High profile public debates
 * Time/Post-length constrained-live debates
