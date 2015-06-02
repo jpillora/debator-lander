@@ -38,14 +38,14 @@ Within an a Claim, each sentence must be backed up by one or more prior claims o
 
 **Evidence**
 
-A piece of evidence is a single document or group of documents. It could be a photo, a peer-reviewed paper, a statistic with an accompanying experimental and observational study or a quote. In order to be accepted as evidence, each document **must** include a valid link or a copy of the original material.
+A piece of evidence is a single document or group of documents. It could be a photo, a quote from a peer-reviewed paper or trusted source*, a statistic with an accompanying experimental and observational study. In order to be accepted as evidence, each document **must** include a valid link or a copy of the original material.
 
 Users must be able to rate evidence quality. So if anecdotal evidence or pseudo-scientific evidence is provided, it can be flagged as such by users (at some threshold it will be invalidated and will not count towards any Claims).
 
 ---
 
 * Are these good foundational concepts?
-* Speaking in purely factual statements is optimal, though is it realistic?
+* Making a case for something in purely factual statements is optimal, though is it realistic?
 * What should users vote on?
 
 ---
